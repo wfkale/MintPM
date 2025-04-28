@@ -1,0 +1,372 @@
+<!-- <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="ena">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mint Precious Metals | Tanzania's Premier Precious Metals Exchange</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#713694',
+                        dark: '#1a1a1a',
+                    },
+                    fontFamily: {
+                        'luxury': ['Cormorant Garamond', 'serif'],
+                        'display': ['Playfair Display', 'serif'],
+                        'body': ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        .luxury-font {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        
+        .display-font {
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 0.3px;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1617128734666-0c60b8410a3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+        }
+        
+        .gold-bg {
+            background: linear-gradient(rgba(113, 54, 148, 0.9), rgba(113, 54, 148, 0.9)), url('https://images.unsplash.com/photo-1617128734666-0c60b8410a3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.03);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: white;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        
+        .gold-bar {
+            height: 2px;
+            width: 60px;
+            background: linear-gradient(90deg, #D4AF37, #F9D423);
+            margin: 1rem auto;
+        }
+        
+        .text-shadow {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .letter-spacing-wide {
+            letter-spacing: 1px;
+        }
+        
+        .letter-spacing-tight {
+            letter-spacing: -0.5px;
+        }
+    </style>
+</head>
+<body class="bg-dark text-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-dark bg-opacity-90 backdrop-filter backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-2">
+                <div class="flex items-center">
+                    <img src="/images/Group 56.svg" alt="Mint Logo" class="h-24 w-24  mr-2">
+                </div>
+                <div class="hidden md:flex space-x-10">
+                    <a href="#services" class="nav-link text-white hover:text-primary text-sm uppercase tracking-wider">Services</a>
+                    <a href="#about" class="nav-link text-white hover:text-primary text-sm uppercase tracking-wider">About</a>
+                    <a href="#machinery" class="nav-link text-white hover:text-primary text-sm uppercase tracking-wider">Machinery</a>
+                    <a href="#contact" class="nav-link text-white hover:text-primary text-sm uppercase tracking-wider">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero flex items-center justify-center text-center relative pt-20">
+        <div class="max-w-4xl px-6">
+            <h1 class="text-4xl md:text-5xl font-medium mb-6 luxury-font text-shadow tracking-tight">Tanzania's Premier<br>Precious Metals Exchange</h1>
+            <div class="gold-bar"></div>
+            <p class="text-lg md:text-xl mb-10 opacity-90 tracking-wider">Exclusive access to the finest gold, silver, and mineral commodities in East Africa</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-primary hover:bg-opacity-90 text-white px-8 py-3 rounded-sm font-medium tracking-wider transition duration-300 transform hover:scale-105">Enquire Now</a>
+                <a href="#services" class="border border-white hover:border-primary hover:text-primary text-white px-8 py-3 rounded-sm font-medium tracking-wider transition duration-300 transform hover:scale-105">Our Services</a>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-0 right-0 flex justify-center">
+            <a href="#services" class="text-white animate-bounce">
+                <i class="fas fa-chevron-down text-xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-medium mb-4 luxury-font tracking-tight">Our Exclusive Services</h2>
+                <div class="gold-bar"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-gray-900 rounded-sm overflow-hidden hover-scale transition-all duration-300 shadow-xl">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('360_F_1079278951_ueG9vElavG7fNZrNrx2vFmkaKR6cgQk4.jpg');"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-medium mb-3 luxury-font tracking-tight">Precious Metals Trading</h3>
+                        <p class="text-gray-300 mb-4 text-sm tracking-wider">Discreet, high-value transactions in gold, silver, and other precious metals with guaranteed authenticity and competitive pricing.</p>
+                        <a href="#contact" class="text-primary font-medium inline-flex items-center text-sm tracking-wider">Learn more <i class="fas fa-chevron-right ml-2 text-xs"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-gray-900 rounded-sm overflow-hidden hover-scale transition-all duration-300 shadow-xl">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('istockphoto-937183680-612x612.jpg');"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-medium mb-3 luxury-font tracking-tight">Mineral Commodities</h3>
+                        <p class="text-gray-300 mb-4 text-sm tracking-wider">Strategic sourcing and distribution of Tanzania's finest mineral resources to global markets.</p>
+                        <a href="#contact" class="text-primary font-medium inline-flex items-center text-sm tracking-wider">Learn more <i class="fas fa-chevron-right ml-2 text-xs"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-gray-900 rounded-sm overflow-hidden hover-scale transition-all duration-300 shadow-xl">
+                    <div class="h-64 bg-cover  bg-center" style="background-image: url('istockphoto-1074843162-612x612.jpg');"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-medium mb-3 luxury-font tracking-tight">Mining Equipment Leasing</h3>
+                        <p class="text-gray-300 mb-4 text-sm tracking-wider">Premium heavy machinery leasing with full maintenance support for your mining operations.</p>
+                        <a href="#machinery" class="text-primary font-medium inline-flex items-center text-sm tracking-wider">Learn more <i class="fas fa-chevron-right ml-2 text-xs"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 gold-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1">
+                    <h2 class="text-3xl md:text-4xl font-medium mb-6 luxury-font tracking-tight">The Mint Precious Metals Standard</h2>
+                    <div class="gold-bar"></div>
+                    <p class="text-sm mb-6 opacity-90 tracking-wider">Established in the heart of Tanzania's mineral-rich landscape, Mint Precious Metals has cultivated exclusive relationships with the region's most reputable mining operations.</p>
+                    <p class="text-sm mb-8 opacity-90 tracking-wider">Our discreet, white-glove service ensures that high-net-worth individuals and institutional investors receive unparalleled access to Tanzania's precious resources.</p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="bg-dark bg-opacity-40 p-4 rounded-sm backdrop-filter backdrop-blur-sm">
+                            <h3 class="text-xl font-medium mb-2 tracking-tight">15+ Years</h3>
+                            <p class="opacity-80 text-xs tracking-wider">Industry Experience</p>
+                        </div>
+                        <div class="bg-dark bg-opacity-40 p-4 rounded-sm backdrop-filter backdrop-blur-sm">
+                            <h3 class="text-xl font-medium mb-2  tracking-tight">100%</h3>
+                            <p class="opacity-80 text-xs tracking-wider">Assay Guarantee</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <div class="rounded-sm overflow-hidden shadow-2xl hover-scale">
+                        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Gold bars" class="w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-medium mb-6 luxury-font tracking-tight">Begin Your Partnership</h2>
+                    <div class="gold-bar"></div>
+                    <p class="text-sm mb-8 opacity-90 tracking-wider">Contact our executive team for discreet, personalized service.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-primary bg-opacity-20 flex items-center justify-center text-primary">
+                                <i class="fas fa-map-marker-alt text-sm"></i>
+                            </div>
+                            <div class="ml-3">
+                                <h3 class="text-sm font-medium mb-1 luxury-font tracking-tight">Headquarters</h3>
+                                <p class="text-gray-300 text-xs tracking-wider">400 Toure Drive, 3rd floor, Masaki, Dar Es Salaam, Tanzania</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-primary bg-opacity-20 flex items-center justify-center text-primary">
+                                <i class="fas fa-envelope text-sm"></i>
+                            </div>
+                            <div class="ml-3">
+                                <h3 class="text-sm font-medium mb-1 luxury-font tracking-tight">Email</h3>
+                                <p class="text-gray-300 text-xs tracking-wider">info@tantelholdings.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-primary bg-opacity-20 flex items-center justify-center text-primary">
+                                <i class="fas fa-phone-alt text-sm"></i>
+                            </div>
+                            <div class="ml-3">
+                                <h3 class="text-sm font-medium mb-1 luxury-font tracking-tight">Phone</h3>
+                                <p class="text-gray-300 text-xs tracking-wider">+255 123 456 789</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-900 p-8 rounded-sm shadow-xl">
+                    <h3 class="text-xl font-medium mb-6 luxury-font tracking-tight">Enquire Now</h3>
+                    <form>
+                        <div class="mb-4">
+                            <label for="name" class="block text-xs font-medium text-gray-300 mb-1 tracking-wider">Full Name</label>
+                            <input type="text" id="name" class="w-full px-3 py-2 text-sm bg-gray-800 border border-gray-700 rounded-sm focus:outline-none focus:ring-1 focus:ring-primary focus:border-transparent tracking-wider" placeholder="John Smith">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-xs font-medium text-gray-300 mb-1 tracking-wider">Email Address</label>
+                            <input type="email" id="email" class="w-full px-3 py-2 text-sm bg-gray-800 border border-gray-700 rounded-sm focus:outline-none focus:ring-1 focus:ring-primary focus:border-transparent tracking-wider" placeholder="john@example.com">
+                        </div>
+                        <div class="mb-4">
+                            <label for="phone" class="block text-xs font-medium text-gray-300 mb-1 tracking-wider">Phone Number</label>
+                            <input type="tel" id="phone" class="w-full px-3 py-2 text-sm bg-gray-800 border border-gray-700 rounded-sm focus:outline-none focus:ring-1 focus:ring-primary focus:border-transparent tracking-wider" placeholder="+255 123 456 789">
+                        </div>
+                        <div class="mb-4">
+                            <label for="service" class="block text-xs font-medium text-gray-300 mb-1 tracking-wider">Service Interest</label>
+                            <select id="service" class="w-full px-3 py-2 text-sm bg-gray-800 border border-gray-700 rounded-sm focus:outline-none focus:ring-1 focus:ring-primary focus:border-transparent tracking-wider">
+                                <option>Precious Metals Trading</option>
+                                <option>Mineral Commodities</option>
+                                <option>Mining Equipment Leasing</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-xs font-medium text-gray-300 mb-1 tracking-wider">Message</label>
+                            <textarea id="message" rows="3" class="w-full px-3 py-2 text-sm bg-gray-800 border border-gray-700 rounded-sm focus:outline-none focus:ring-1 focus:ring-primary focus:border-transparent tracking-wider" placeholder="Your message..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary hover:bg-opacity-90 text-white px-6 py-3 rounded-sm font-medium tracking-wider transition duration-300 transform hover:scale-105">Submit Enquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-3">
+                        <img src="/images/Group 56.svg" alt="Mint Logo" class="h-24 w-24  mr-2">
+                    </div>
+                    <p class="text-gray-400 text-xs tracking-wider">Tanzania's premier precious metals and mining services provider.</p>
+                </div>
+                <div>
+                    <h3 class="text-white text-sm font-medium mb-3 luxury-font tracking-wider">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition text-xs tracking-wider">Gold Trading</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition text-xs tracking-wider">Silver Trading</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition text-xs tracking-wider">Mineral Commodities</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition text-xs tracking-wider">Equipment Leasing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-sm font-medium mb-3 luxury-font tracking-wider">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-400 hover:text-primary transition text-xs tracking-wider">About Us</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-primary transition text-xs tracking-wider">Contact</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition text-xs tracking-wider">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition text-xs tracking-wider">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-sm font-medium mb-3 luxury-font tracking-wider">Connect</h3>
+                    <div class="flex space-x-3">
+                        <a href="#" class="h-8 w-8 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 hover:text-primary hover:bg-gray-700 transition">
+                            <i class="fab fa-linkedin-in text-xs"></i>
+                        </a>
+                        <a href="#" class="h-8 w-8 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 hover:text-primary hover:bg-gray-700 transition">
+                            <i class="fab fa-twitter text-xs"></i>
+                        </a>
+                        <a href="#" class="h-8 w-8 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 hover:text-primary hover:bg-gray-700 transition">
+                            <i class="fab fa-facebook-f text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500 text-xs tracking-wider">
+                <p>&copy; 2025 Mint Precious Metals. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
